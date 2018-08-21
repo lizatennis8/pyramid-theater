@@ -30,28 +30,39 @@ $(document).ready(function() {
     event.preventDefault();
     var firstNameInput = $("#first-name").val();
     var movieTitleInput = $("#movietitle").val();
-    var ageInput = $("#age").val();
+    var adultInput = $("#adulttix").val();
+    var kidInput = $("#kidtix").val();
+    var seniorInput = $("#seniortix").val();
     var timeInput = $("#time").val();
     var screenInput = $("#screen").val();
-    var quantityInput = $("#quantity").val();
+    var priceResult = ((seniorInput * 8) + (kidInput * 6) + (adultInput * 11));
+    console.log(priceResult);
+
 
     $(".first-name").text(firstNameInput);
     $(".movietitle").text(movieTitleInput);
-    $(".age").text(ageInput);
     $(".time").text(timeInput);
     $(".screen").text(screenInput);
-    $(".quanity").text(quantityInput);
+    $(".adult").text(adultInput);
+    $(".senior").text(seniorInput);
+    $(".kid").text(kidInput);
+    $(".priceresult").text("$" + priceResult)
 
 
-    if (ageInput < 10) {
-      $(".priceresult").text("$" + quantityInput * 6);
-    } else if (ageInput > 65) {
-      $(".priceresult").text("$" + quantityInput * 8);
-    } else if (ageInput > 10) {
-      $(".priceresult").text("$" + quantityInput * 11);
-    }
+    // if (screenInput === "Mini Screen") {
+    //   $(".priceresult").text("$" + quantityInput * 6);
+    // } else if (ageInput > 65) {
+    //   $(".priceresult").text("$" + quantityInput * 8);
+    // } else if (ageInput > 10) {
+    //   $(".priceresult").text("$" + quantityInput * 11);
+    // }
 
     $("#tickettotal").show();
+
+
+      $("#makepayment").click(function() {
+        $("#tickettotal").append("Your payment has been accepted. Thank you for choosing Pyramid Theater. We hope you enjoy the show!");
+      });
 
 
     resetInputs();

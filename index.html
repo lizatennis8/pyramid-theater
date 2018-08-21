@@ -32,11 +32,7 @@
               </select>
             </div>
             <div class="form-group">
-              <label for="age">Age</label>
-              <input type="number" class="form-control" id="age">
-            </div>
-            <div class="form-group">
-              <label>Movie Time</label>
+              <label>Showtime</label>
               <select class="form-control" id="time">
                 <option></option>
                 <option>11:00AM</option>
@@ -58,16 +54,46 @@
               </select>
             </div>
             <div class="form-group">
-              <label for="quantity">Number of tickets</label>
-              <input type="number" class="form-control" id="quantity">
+              <label for="kidtix">Kid Tickets</label>
+              <input type="number" class="form-control" id="kidtix">
             </div>
-            <button type="submit" class="btn btn-info">Purchase tickets</button>
+            <div class="form-group">
+              <label for="adulttix">Adult Tickets</label>
+              <input type="number" class="form-control" id="adulttix">
+            </div>
+            <div class="form-group">
+              <label for="seniortix">Senior Discount Tickets</label>
+              <input type="number" class="form-control" id="seniortix">
+            </div>
+            <button type="submit" class="btn btn-info">Submit Order</button>
           </form>
         </div>
         <div class="col-md-6">
           <div id="tickettotal">
-            <h3>Please review your purchase:</h3>
-            <p>Hi <span class="first-name"></span>, you have requested <span class="quanity"></span> tickets to the <span class="time"></span> showing of <span class="movietitle"></span> on our <span class="screen"></span>. Your total ticket price will be <span class="priceresult"> Thank you for choosing Pyramid Theater! We hope you enjoy the show!</p>
+            <p>Hi <span class="first-name"></span>, we have reserved your <span class="time"></span> tickets to <span class="movietitle"></span> on our <span class="screen"></span>. The total price will be <span class="priceresult"> Pleae enter your payment details below.</p>
+              <div class="payment-details">
+                <div class="form-group">
+                    <label for="cardnumber">Please enter your card number: </label>
+                    <input type="text" class="form-control" id="cardnumber">
+                  </div>
+                  <div class="form-group">
+                  <label for="cardtype">Card Type:</label>
+                  <select class="form-control" id="cardtype">
+                      <option></option>
+                      <option>Visa</option>
+                      <option>Mastercard</option>
+                      <option>American Express</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="city">City:</label>
+                    <input type="text" class="form-control" id="city">
+                  </div>
+                  <div class="form-group">
+                    <label for="state">State:</label>
+                    <input type="text" class="form-control" id="state">
+                  </div>
+                <span class="btn btn-primary" id="makepayment">Make Payment</span>
           </div>
         <div/>
       </div>
