@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/scripts.js"></script>
+    <title>Movie Tickets</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Pyramid Theater</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Buy Movie Tickets:</h3>
+          <form id="ticket-page">
+            <div class="form-group">
+              <label for="first-name">First name</label>
+              <input type="text" class="form-control" id="first-name">
+            </div>
+            <div class="form-group">
+              <label for="movietitle">Movie</label>
+              <select class="form-control" id="movietitle">
+                <option></option>
+                <option>Hercules</option>
+                <option>Remember The Titans</option>
+                <option>Space Jam</option>
+                <option>Gone With The Wind</option>
+                <option>Free Willy</option>
+                <option>There Will Be Blood</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="age">Age</label>
+              <input type="number" class="form-control" id="age">
+            </div>
+            <div class="form-group">
+              <label>Movie Time</label>
+              <select class="form-control" id="time">
+                <option></option>
+                <option>11:00AM</option>
+                <option>2:25PM</option>
+                <option>5:00PM</option>
+                <option>7:30PM</option>
+                <option>8:10PM</option>
+                <option>9:45PM</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Screen</label>
+              <select class="form-control" id="screen">
+                <option></option>
+                <option>Mini Screen</option>
+                <option>Standard Screen</option>
+                <option>3D Screen</option>
+                <option>Imax Screen</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="quantity">Numbeer of tickets</label>
+              <input type="number" class="form-control" id="quantity">
+            </div>
+            <button type="submit" class="btn btn-info">Purchase tickets</button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <div id="tickettotal">
+            <h3>Please review your purchase:</h3>
+            <p>Hi <span class="first-name"></span> , you have requested <span class="quanity"></span> tickets to the <span class="time"></span> showing of <span class="movietitle"></span> on our <span class="screen"></span>. Your total ticket price will be ... Thank you for choosing Pyramid Theater! We hope you enjoy the show!</p>
+          </div>
+        <div/>
+      </div>
+    </div>
+  </body>
+</html>
