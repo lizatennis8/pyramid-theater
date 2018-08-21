@@ -1,5 +1,19 @@
+
+function resetInputs() {
+$("input#first-name").val("");
+$("select#movietitle").val("");
+$("input#age").val(" ");
+$("select#time").val("");
+$("select#screen").val("");
+$("input#quanity").val(" ");
+}
+
+
+
+
 $(document).ready(function() {
   $("#ticket-page").submit(function() {
+    event.preventDefault();
     var firstNameInput = $("#first-name").val();
     var movieTitleInput = $("#movietitle").val();
     var ageInput = $("#age").val();
@@ -17,6 +31,7 @@ $(document).ready(function() {
 
     $("#tickettotal").show();
 
-    event.preventDefault();
+
+    resetInputs();
   });
 });
